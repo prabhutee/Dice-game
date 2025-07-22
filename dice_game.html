@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>🎲 Multiplayer Dice Game</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ <div class="game-container">
+ <h1>🎲 Multiplayer Dice Game</h1>
+
+<div class="setup">
+ <input type="number" id="numPlayers" placeholder="Number of Players" min="2" />
+ <input type="number" id="targetScore" placeholder="Target Score" min="10" />
+ <button onclick="startGame()">Start Game</button>
+ </div>
+ <div id="playerInputs" class="player-inputs"></div>
+
+<div id="gameBoard" class="hidden">
+<div class="players" id="playersDisplay"></div>
+ <div class="dice-section">
+ <p id="turnText" class="hidden"></p>
+ <p id="motivationalMessage"></p>
+  <button onclick="rollDice()" id="rollBtn" class="hidden">🎲 Roll Dice</button>
+ <button onclick="playAgain()" id="playAgainBtn" class="hidden">Play Again</button>
+</div>
+  <div id="leaderboard" class="leaderboard hidden"></div>
+ </div>
+  </div>
+
+  
+
+  <script src="script.js"></script>
+
+  
+ <audio id="diceSound" src="http://soundbible.com/grab.php?id=2216&type=mp3" preload="auto"></audio>
+  <audio id="turnSound" src="https://soundimage.org/wp-content/uploads/2016/04/UI_Quirky17.mp3" preload="auto"></audio>
+  <audio id="applauseSound" src="http://soundbible.com/grab.php?id=2087&type=mp3" preload="auto"></audio>
+ <audio id="streakSound" src="https://soundimage.org/wp-content/uploads/2016/04/PowerUp18.mp3" preload="auto"></audio>
+</body>
+</html>
